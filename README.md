@@ -51,8 +51,9 @@ This free geocoding API service is provided by Map Maker (My Maps Inc), a web-ba
 
 To solve this problem we created this free geocoding service, which offers generous limits that will suit most users. For those in need of very high-volume geocoding, we offer very affordable geocoding plans(https://geocode.maps.co/plans/).
 
-You can change the base_url to use the vendors comerical offering.</p>
-<p></br>This app has been developed by the team from unapped
+You can change the base_url to use the vendors comerical offering.
+
+This app has been developed by the team from unapped
 
 GITHUB: https://github.com/unapped
 
