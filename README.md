@@ -2,7 +2,7 @@
 # Geocoding Maps Co
 
 Publisher: Unapproved Pty Ltd  
-Connector Version: 1.0.0  
+Connector Version: 1.0.1  
 Product Vendor: My Maps Inc  
 Product Name: Geocoding by Map Maker  
 Product Version Supported (regex): ".\*"  
