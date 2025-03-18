@@ -10,7 +10,7 @@
     "python_version": "3",
     "product_version_regex": ".*",
     "publisher": "Unapproved Pty Ltd",
-    "license": "Copyright (c) Unapproved, 2024",
+    "license": "Copyright (c) Unapproved, 2024-2025",
     "app_version": "1.0.1",
     "utctime_updated": "2024-07-24T11:39:05.077486Z",
     "package_name": "phantom_geocodingmapsco",
