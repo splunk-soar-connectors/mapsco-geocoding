@@ -1,6 +1,6 @@
 # File: geocodingmapsco_connector.py
 
-# Copyright (c) Unapproved, 2024-2025
+# Copyright (c) Unapproved, 2024-2026
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -164,9 +164,7 @@ class GeocodingMapsCoConnector(BaseConnector):
         config = self.get_config()
         api_key = config.get("api_key")
 
-        ret_val, response = self._make_rest_call(
-            "/search", action_result, params={"api_key": api_key, "q": address}, headers=None
-        )
+        ret_val, response = self._make_rest_call("/search", action_result, params={"api_key": api_key, "q": address}, headers=None)
 
         if phantom.is_fail(ret_val):
             return action_result.set_status(phantom.APP_ERROR, "Failed to return lat/long from street address. Check API key.")

@@ -1,9 +1,9 @@
 # Geocoding Maps Co
 
-Publisher: Unapproved Pty Ltd \
-Connector Version: 1.0.1 \
-Product Vendor: My Maps Inc \
-Product Name: Geocoding by Map Maker \
+Publisher: Unapproved Pty Ltd <br>
+Connector Version: 1.0.1 <br>
+Product Vendor: My Maps Inc <br>
+Product Name: Geocoding by Map Maker <br>
 Minimum Product Version: 6.2.1
 
 Forward and Reverse Geocoding
@@ -50,18 +50,19 @@ VARIABLE | REQUIRED | TYPE | DESCRIPTION
 -------- | -------- | ---- | -----------
 **base_url** | required | string | Base URL for service (use default) |
 **api_key** | required | password | API Key (eg: 1234asdf2345) |
+**verify_server_cert** | optional | boolean | Verify server certificate |
 
 ### Supported Actions
 
-[test connectivity](#action-test-connectivity) - Validate the asset configuration for connectivity using supplied configuration \
-[forward geocode](#action-forward-geocode) - Convert human-readable address to coordinates \
+[test connectivity](#action-test-connectivity) - Validate the asset configuration for connectivity using supplied configuration <br>
+[forward geocode](#action-forward-geocode) - Convert human-readable address to coordinates <br>
 [reverse geocode](#action-reverse-geocode) - Convert coordinates to human-readable address
 
 ## action: 'test connectivity'
 
 Validate the asset configuration for connectivity using supplied configuration
 
-Type: **test** \
+Type: **test** <br>
 Read only: **True**
 
 Ensures that a firewall is not blocking conections to the base URL.
@@ -79,7 +80,7 @@ No Output
 
 Convert human-readable address to coordinates
 
-Type: **investigate** \
+Type: **investigate** <br>
 Read only: **True**
 
 Forward Geocoding process permits two forms of an address.
@@ -114,7 +115,7 @@ summary.total_objects_successful | numeric | | |
 
 Convert coordinates to human-readable address
 
-Type: **investigate** \
+Type: **investigate** <br>
 Read only: **True**
 
 To reverse geocode, provide both the latitude and longitude parameters to the /reverse endpoint, e.g:
@@ -145,7 +146,7 @@ ______________________________________________________________________
 
 Auto-generated Splunk SOAR Connector documentation.
 
-Copyright 2025 Splunk Inc.
+Copyright 2026 Splunk Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
