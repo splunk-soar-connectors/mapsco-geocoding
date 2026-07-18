@@ -117,9 +117,6 @@ class GeocodingMapsCoConnector(BaseConnector):
     def _make_rest_call(self, endpoint, action_result, method="get", **kwargs):
         # **kwargs can be any additional parameters that requests.request accepts
 
-        self.save_progress("######################")
-        self.save_progress(f"kwargs: {kwargs}")
-
         config = self.get_config()
 
         resp_json = None
@@ -131,7 +128,6 @@ class GeocodingMapsCoConnector(BaseConnector):
 
         # Create a URL to connect to
         url = self._base_url + endpoint
-        self.save_progress(f"URL: {url}")
 
         try:
             r = request_func(
@@ -141,7 +137,7 @@ class GeocodingMapsCoConnector(BaseConnector):
                 **kwargs,
             )
         except Exception as e:
-            return RetVal(action_result.set_status(phantom.APP_ERROR, f"Error Connecting to server. Details: {e!s}"), resp_json)
+            return RetVal(action_result.set_status(phantom.APP_ERROR, f"Error connecting to server: {type(e).__name__}"), resp_json)
 
         return self._process_response(r, action_result)
 
@@ -168,7 +164,9 @@ class GeocodingMapsCoConnector(BaseConnector):
         config = self.get_config()
         api_key = config.get("api_key")
 
-        ret_val, response = self._make_rest_call(f"/search?api_key={api_key}&q={address}", action_result, params=None, headers=None)
+        ret_val, response = self._make_rest_call(
+            "/search", action_result, params={"api_key": api_key, "q": address}, headers=None
+        )
 
         if phantom.is_fail(ret_val):
             return action_result.set_status(phantom.APP_ERROR, "Failed to return lat/long from street address. Check API key.")
@@ -187,7 +185,12 @@ class GeocodingMapsCoConnector(BaseConnector):
         config = self.get_config()
         api_key = config.get("api_key")
 
-        ret_val, response = self._make_rest_call(f"/reverse?api_key={api_key}&lat={lat}&lon={lon}", action_result, params=None, headers=None)
+        ret_val, response = self._make_rest_call(
+            "/reverse",
+            action_result,
+            params={"api_key": api_key, "lat": lat, "lon": lon},
+            headers=None,
+        )
 
         if phantom.is_fail(ret_val):
             return action_result.set_status(phantom.APP_ERROR, "Failed to return street address from lat/long. Check API key.")
