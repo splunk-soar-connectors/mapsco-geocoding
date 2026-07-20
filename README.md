@@ -1,7 +1,7 @@
 # Geocoding Maps Co
 
 Publisher: Unapproved Pty Ltd <br>
-Connector Version: 1.0.1 <br>
+Connector Version: 1.0.2 <br>
 Product Vendor: My Maps Inc <br>
 Product Name: Geocoding by Map Maker <br>
 Minimum Product Version: 6.2.1
