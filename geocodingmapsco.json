@@ -10,7 +10,7 @@
     "python_version": "3",
     "product_version_regex": ".*",
     "publisher": "Unapproved Pty Ltd",
-    "license": "Copyright (c) Unapproved, 2024-2025",
+    "license": "Copyright (c) Unapproved, 2024-2026",
     "app_version": "1.0.1",
     "utctime_updated": "2024-07-24T11:39:05.077486Z",
     "package_name": "phantom_geocodingmapsco",
@@ -31,6 +31,12 @@
             "data_type": "password",
             "required": true,
             "order": 1
+        },
+        "verify_server_cert": {
+            "description": "Verify server certificate",
+            "data_type": "boolean",
+            "default": true,
+            "order": 2
         }
     },
     "actions": [
@@ -214,5 +220,11 @@
             },
             "versions": "EQ(*)"
         }
-    ]
+    ],
+    "pip39_dependencies": {
+        "wheel": []
+    },
+    "pip313_dependencies": {
+        "wheel": []
+    }
 }

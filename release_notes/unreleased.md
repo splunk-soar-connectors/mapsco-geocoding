@@ -1,1 +1,4 @@
 **Unreleased**
+
+* Enable TLS certificate verification by default and expose an explicit asset setting.
+* Keep API keys out of progress and transport error messages.
